@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>CSS, который вы заслужили</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/styles/shower/styles.css">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+    </style>
+</head>
+<body class="shower list">
+
+<header class="caption">
+    <h1>Старый Новый CSS</h1>
+    <p>Оловянников Илья, Moscow CSS 2022 </p>
+</header>
+
+<section class="slide">
+    <h2>CSS, который Вы
+        <del>забыли</del>
+        заслужили
+    </h2>
+    <div class="awesome">
+        <p>CSS Is Awesome</p>
+    </div>
+</section>
+<section class="slide">
+    <h2>Привет!</h2>
+    <div class="about">
+        <ul>
+            <li>Frontend-разработчик в&nbsp;&laquo;Сбер&raquo;</li>
+            <li>Люблю верстать</li>
+            <li>Наставляю на&nbsp;верный путь в&nbsp;&laquo;HTML&nbsp;Academy&raquo;</li>
+        </ul>
+        <div class="me">
+            <picture>
+                <source srcset="./assets/images/me.avif" type="image/avif">
+                <source srcset="./assets/images/me.webp" type="image/webp">
+                <img width="300" height="400" src="./assets/images/me.jpeg"/>
+            </picture>
+        </div>
+    </div>
+</section>
+
+<footer class="badge">
+    <a href="https://github.com/shower/shower">Сделано в Shower</a>
+</footer>
+<div class="progress"></div>
+<script src="./shower.min.js"></script>
+</body>
+</html>

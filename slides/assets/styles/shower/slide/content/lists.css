@@ -1,0 +1,47 @@
+/* Lists */
+
+.slide ol,
+.slide ul {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 1em;
+    list-style: none;
+    counter-reset: list;
+}
+
+/* Marker */
+
+.slide li::marker {
+    color: var(--color-grey);
+}
+
+.slide li ol,
+.slide li ul {
+    margin-bottom: 0;
+    margin-left: 2em;
+}
+
+/* Markers */
+
+.slide ol > li::marker {
+    counter-increment: list;
+    content: counter(list) '. ';
+}
+
+.slide ul > li::marker {
+    content: '• ';
+}
+
+.slide ul > li:lang(ru)::marker {
+    content: '— ';
+}
+
+/* Custom */
+
+.slide ol > li[value]::marker {
+    content: attr(value) '. ';
+}
+
+.slide ul > li[value]::marker {
+    content: attr(value);
+}
