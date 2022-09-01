@@ -32,12 +32,11 @@
     <h2>Привет!</h2>
     <div class="about__wrapper">
         <ul class="about__list">
+            <li class="about__list-item">Илья Оловянников</li>
             <li class="about__list-item next">Frontend-разработчик в&nbsp;&laquo;Сбер&raquo;</li>
             <li class="about__list-item next">Люблю верстать</li>
             <li class="about__list-item next">Наставляю на&nbsp;верный путь в&nbsp;&laquo;HTML&nbsp;Academy&raquo;</li>
-            <li class="about__list-item next">
-                Гляжу в светлое будущее
-            </li>
+            <li class="about__list-item next">Гляжу в светлое будущее</li>
         </ul>
         <div class="about__me">
             <picture>
@@ -54,12 +53,13 @@
     <div class="thread__wrapper">
         <ol class="thread__list">
             <li value="1" class="thread__list-item next">
-                Много Javascript-first решений
+                Много готовых решений
                 <div class="thread__list-image-box">
                     <picture>
-                        <source srcset="./assets/images/css-in-js.avif" type="image/avif">
-                        <source srcset="./assets/images/css-in-js.webp" type="image/webp">
-                        <img width="1200" height="600" src="./assets/images/css-in-js.jpeg" alt="CSS-in-JS пример"/>
+                        <source srcset="./assets/images/css-frameworks.avif" type="image/avif">
+                        <source srcset="./assets/images/css-frameworks.webp" type="image/webp">
+                        <img width="1200" height="800" src="./assets/images/css-frameworks.jpeg"
+                             alt="CSS-in-JS пример"/>
                     </picture>
                 </div>
             </li>
@@ -69,7 +69,8 @@
                     <picture>
                         <source srcset="./assets/images/caniuse.avif" type="image/avif">
                         <source srcset="./assets/images/caniuse.webp" type="image/webp">
-                        <img width="1200" height="600" src="./assets/images/caniuse.jpeg" alt="Прмимер статистики поддержки старыми браузерами Shadow DOM"/>
+                        <img width="1200" height="600" src="./assets/images/caniuse.jpeg"
+                             alt="Прмимер статистики поддержки старыми браузерами Shadow DOM"/>
                     </picture>
                 </div>
             </li>
@@ -77,7 +78,8 @@
                 Слишком много нового
                 <div class="thread__list-image-box">
                     <picture>
-                        <img width="703" height="469" src="./assets/images/rocket-1.jpeg" alt="Много нового CSS это как Рокет Сайнс?"/>
+                        <img width="703" height="469" src="./assets/images/rocket-1.jpeg"
+                             alt="Много нового CSS это как Рокет Сайнс?"/>
                     </picture>
                 </div>
             </li>
@@ -88,10 +90,436 @@
     </div>
 </section>
 
+<section class="slide mem mem--1">
+    <img src="./assets/images/mem-popuguy.jpeg" alt="Давайте разберемся">
+</section>
+
+<section class="calc slide calc--math">
+    <h2>calc()</h2>
+    <img width="300" height="300" src="./assets/images/math-meme.jpg" alt="Чистая математика">
+</section>
+
+<section class="calc slide"><h2>calc()</h2>
+    <div class="calc__item">
+            <pre style="font-size: 1.25rem">
+                <code>&lt;ul class="list"&gt;</code>
+                <code>  &lt;li&gt;Я карточка!&lt;/li&gt;</code>
+                <code>  &lt;li&gt;Я просто карточка!&lt;/li&gt;</code>
+                <code>  &lt;li&gt;А я буду широоокая карточка!&lt;/li&gt;</code>
+                <code>&lt;/ul&gt;</code>
+            </pre>
+        <div class="calc__example calc__example-cards">
+            <ul>
+                <li>Я карточка!</li>
+                <li>Я просто карточка!</li>
+                <li>А я буду широооокая карточка!</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="calc slide"><h2>calc()</h2>
+    <div class="calc__item">
+            <pre>
+                <code>ul.list {</code>
+                <code>  <mark>padding: 20px;</mark></code>
+                <code>  display: grid</code>
+                <code>  gap: 10px;</code>
+                <code>}</code>
+            </pre>
+        <div class="calc__example calc__example-cards">
+            <ul>
+                <li>Я карточка!</li>
+                <li>Я просто карточка!</li>
+                <li>А я буду широооокая карточка!</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="calc slide"><h2>calc()</h2>
+    <div class="calc__item">
+            <pre>
+                <code>.item {</code>
+                <code>  padding: 15px;</code>
+                <code>  min-height: 150px;</code>
+                <code>  color: white;</code>
+                <code>  background-color: tomato;</code>
+                <code>}</code>
+            </pre>
+        <div class="calc__example calc__example-cards">
+            <ul>
+                <li>Я карточка!</li>
+                <li>Я просто карточка!</li>
+                <li>А я буду широооокая карточка!</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="calc slide"><h2>calc()</h2>
+    <div class="calc__item">
+            <pre>
+                <code>.item--wide {</code>
+                <code>  width: calc(100% + <mark>20px</mark> * 2);</code>
+                <code>}</code>
+            </pre>
+        <div class="calc__example calc__example-cards">
+            <ul>
+                <li>Я карточка!</li>
+                <li>Я просто карточка!</li>
+                <li class="wide">А я буду широооокая карточка!</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="calc slide"><h2>calc()</h2>
+    <div class="calc__item">
+        <pre>
+            <code>.item--wide {</code>
+            <code>  <mark>margin-left: -20px;</mark></code>
+            <code>  width: calc(100% + 20px * 2);</code>
+            <code>}</code>
+        </pre>
+        <div class="calc__example calc__example-cards">
+            <ul>
+                <li>Я карточка!</li>
+                <li>Я просто карточка!</li>
+                <li class="wide wide-normal">А я буду широооокая карточка!</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="calc slide"><h2>calc()</h2>
+    <div class="calc__item">
+            <pre class="small-font">
+                <code>&lt;div&gt;</code>
+                <code>  &lt;ul class="list"&gt;</code>
+                <code>   &lt;li class="item"&gt;First Element&lt;/li&gt;</code>
+                <code>   &lt;li class="item"&gt;Second Element&lt;/li&gt;</code>
+                <code>   &lt;li class="item"&gt;Third Element&lt;/li&gt;</code>
+                <code>  &lt;/ul&gt;</code>
+                <code>&lt;/div&gt;</code>
+            </pre>
+        <div class="calc__animation calc__animation--visible">
+            <div>
+                <ul>
+                    <li>First Element</li>
+                    <li>Second Element</li>
+                    <li>Third Element</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="calc slide"><h2>calc()</h2>
+    <div class="calc__item">
+            <pre>
+                <code>.list {</code>
+                <code>  list-style: none;</code>
+                <code>  margin: 0;</code>
+                <code>  padding: 0;</code>
+                <code>  display: grid;</code>
+                <code>  gap: 5px;</code>
+                <code>}</code>
+            </pre>
+        <div class="calc__animation calc__animation--visible">
+            <div>
+                <ul>
+                    <li>First Element</li>
+                    <li>Second Element</li>
+                    <li>Third Element</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="calc slide"><h2>calc()</h2>
+    <div class="calc__item">
+            <pre>
+                <code>.item {</code>
+                <code>  padding: 12px;</code>
+                <code>  color: white;</code>
+                <code>  background-color: salmon;</code>
+                <code>  // ...</code>
+                <code>}</code>
+            </pre>
+        <div class="calc__animation calc__animation--visible">
+            <div>
+                <ul>
+                    <li>First Element</li>
+                    <li>Second Element</li>
+                    <li>Third Element</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="calc slide"><h2>calc()</h2>
+    <div class="calc__item">
+            <pre>
+                <code>.item {</code>
+                <code>  padding: 12px;</code>
+                <code>  color: white;</code>
+                <code>  background-color: salmon;</code>
+                <code>  <mark>transition: 0.3s ease;</mark></code>
+                <code>  <mark>transform: translateX(-100%);</mark></code>
+                <code>}</code>
+            </pre>
+    </div>
+</section>
+<section class="calc slide">
+    <h2>calc()</h2>
+    <div>
+        <pre>
+            <code>@keyframes slide-in {</code>
+            <code>  0% { transform: translateX(-100%); }</code>
+            <code>  100% { transform: translateX(0); }</code>
+            <code>}</code>
+        </pre>
+        <pre>
+            <code>ul {</code>
+            <code>  animation-name: slide-in;</code>
+            <code>}</code>
+        </pre>
+    </div>
+</section>
+<section class="calc slide animation animation--disabled">
+    <h2>calc()</h2>
+    <div class="calc__animation">
+        <div>
+            <ul data-animation="true">
+                <li>First Element</li>
+                <li>Second Element</li>
+                <li>Third Element</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="calc slide"><h2>calc()</h2>
+    <div class="calc__item">
+        <pre>
+            <code><mark>[data-animation=true]</mark> li {</code>
+            <code>  animation-name: slide-in;</code>
+            <code>  animation-duration: 2s;</code>
+            <code>  animation-fill-mode: forwards;</code>
+            <code>  animation-delay: calc(var(<mark>--index</mark>) * 0.5s);</code>
+            <code>}</code>
+        </pre>
+    </div>
+</section>
+<section class="calc slide"><h2>calc()</h2>
+    <div class="calc__item">
+        <div class="fw">
+            <pre>
+                <code>const ul = $('.list');</code>
+                <code>const li = $('.item');</code>
+                <code class="mark">ul.setAttribute('data-animation', true);</code>
+                <code>li.forEach((el, idx) => </code>
+                <code class="mark">  el.style.setProperty('--index', idx + 1));</code>
+                <code></code>
+                <code>}</code>
+            </pre>
+        </div>
+    </div>
+</section>
+<section class="calc slide animation">
+    <h2>calc()</h2>
+    <div class="calc__item">
+        <div class="calc__animation">
+            <div>
+                <ul>
+                    <li>First Element</li>
+                    <li>Second Element</li>
+                    <li>Third Element</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="slide form-validation">
+    <h2>:valid & :invalid</h2>
+    <div class="form-validation__item">
+        <img width="259" height="194" src="./assets/images/validation-meme.jpg" alt="Валадируй формы!">
+    </div>
+</section>
+<section class="slide form-validation"><h2>:valid & :invalid</h2>
+    <div class="form-validation__item">
+        <form class="form" action="" method="POST" autocomplete="off">
+            <h1 class="form__title">Регистрация</h1>
+            <fieldset>
+                <input class="form__input" type="text" placeholder="Ваше имя" required/>
+                <input autocomplete="off" class="form__input" type="email" placeholder="Ваш email"
+                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required/>
+                <input class="form__input" type="password" placeholder="Пароль (минимум 5 символов)" minlength="5"
+                       required/>
+                <div class="form__error">Пароль не менее 5 символов</div>
+                <button class="form__submit" type="submit">Зарегистрироваться</button>
+            </fieldset>
+        </form>
+    </div></section>
+<section class="slide form-validation"><h2>:valid & :invalid</h2>
+    <div class="form-validation__item">
+            <pre>
+                <code>&lt;form class="form"&gt;</code>
+                <code>  &lt;h1&gt;Регистрация&lt;/h1&gt;</code>
+                <code>  &lt;fieldset&gt;</code>
+                <code>      &lt;input placeholder="Введите имя" type="text" <mark>required</mark> class="form__input"&gt;</code>
+                <code>      &lt;input placeholder="Введите почту" <mark>type="email"</mark> required class="form__input"&gt;</code>
+                <code>      &lt;input placeholder="Введите пароль" type="password" required class="form__input"
+            <mark>minlength="5"</mark>
+        &gt;</code>
+                <code>      &lt;button type="submit" class="form__submit"&gt;Зарегистрироваться&lt;/button&gt;</code>
+                <code>  &lt;/fieldset&gt;</code>
+                <code>&lt;/form&gt;</code>
+            </pre>
+    </div></section>
+<section class="slide form-validation"><h2>:valid & :invalid</h2>
+    <div class="form-validation__item">
+        <pre>
+            <code>.form__input:required {</code>
+            <code>  border-color: grey;</code>
+            <code>  background-image: url('./images/required.svg');</code>
+            <code>}</code>
+        </pre>
+        <pre>
+            <code>.form__input:required:focus<mark>:invalid</mark> {</code>
+            <code>  border-color: red;</code>
+            <code>  background-image: url('./images/required-invalid.svg');</code>
+            <code>}</code>
+        </pre>
+        <pre>
+            <code>.form__input:required<mark>:valid</mark> {</code>
+            <code>  border-color: green;</code>
+            <code>  background-image: url('./images/required-valid.svg');</code>
+            <code>}</code>
+        </pre>
+    </div></section>
+<section class="slide form-validation"><h2>:valid & :invalid</h2>
+    <div class="form-validation__item">
+            <pre>
+                <code>.form fieldset {</code>
+                <code>  border: none;</code>
+                <code>  padding: 0;</code>
+                <code>  margin: 0;</code>
+                <code>}</code>
+            </pre>
+        <pre>
+                <code><mark>// Если любое из полей invalid скрываем кнопку регистрации</mark></code>
+                <code>.form <mark>fieldset:invalid</mark> .form__submit {</code>
+                <code>  display: none;</code>
+                <code>}</code>
+            </pre>
+    </div></section>
+<section class="slide form-validation"><h2>:valid & :invalid</h2>
+    <div class="form-validation__item">
+            <pre>
+                <code><mark>// Ошибка длины пароля</mark></code>
+                <code>.form form__error {</code>
+                <code>  display: none;</code>
+                <code>  color: red;</code>
+                <code>}</code>
+            </pre>
+        <pre>
+                <code><mark>// Если placeholder не показывается и поле invalid</mark></code>
+                <code>.form .form__input[type="password"]<mark>:not(:placeholder-shown):invalid</mark> + .form__error {</code>
+                <code>  display: block;</code>
+                <code>}</code>
+            </pre>
+    </div></section>
+<section class="slide form-validation"><h2>:valid & :invalid</h2>
+    <div class="form-validation__item">
+        <form class="form" action="" method="POST" autocomplete="off">
+            <h1 class="form__title">Регистрация</h1>
+            <fieldset>
+                <input class="form__input" type="text" placeholder="Ваше имя" required/>
+                <input autocomplete="off" class="form__input" type="email" placeholder="Ваш email"
+                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required/>
+                <input class="form__input" type="password" placeholder="Пароль (минимум 5 символов)" minlength="5"
+                       required/>
+                <div class="form__error">Пароль не менее 5 символов</div>
+                <button class="form__submit" type="submit">Зарегистрироваться</button>
+            </fieldset>
+        </form>
+    </div>
+</section>
+
+<section class="slide empty">
+    <h2>:empty</h2>
+    <div class="empty__item ">
+        <ul id="empty" class="empty__list users__list js-empty"></ul>
+        <p class="empty__message message message--empty">
+            Список пустой, попробуйте добавить пользователей снова
+            <button class="refetch">Добавить</button>
+        </p>
+    </div>
+</section>
+<section class="slide empty">
+    <h2>:empty</h2>
+    <div class="empty__item ">
+        <pre>
+            <code><mark>&lt;ul id="empty" class="empty__list"&gt;&lt;/ul&gt;</mark></code>
+            <code>&lt;p class="empty__message message"&gt;</code>
+            <code>  Список пустой, попробуйте добавить пользователей снова</code>
+            <code>  &lt;button id="refetch"&gt;Добавить&lt;/button&gt;</code>
+            <code>&lt;/p&gt;</code>
+        </pre>
+    </div>
+</section>
+<section class="slide empty">
+    <h2>:empty</h2>
+    <div class="empty__item ">
+        <pre>
+            <code>.empty__message {</code>
+            <code>  display: none;</code>
+            <code>}</code>
+            <code>.empty__list<mark>:empty</mark> + .empty__message {</code>
+            <code>  display: block;</code>
+            <code>}</code>
+        </pre>
+    </div>
+</section>
+
+<section class="slide empty">
+    <h2>:empty</h2>
+    <div class="empty__item ">
+        <ul class="empty__list users__list js-empty"></ul>
+        <p class="empty__message message message--empty">
+            Список пустой, попробуйте добавить пользователей снова
+            <button class="refetch">Добавить</button>
+        </p>
+    </div>
+</section>
+<section class="slide empty">
+    <h2>:empty</h2>
+    <img src="./assets/images/empty-meme.jpg" alt="Вы прекрасны!">
+</section>
+
+<section class="slide overall">
+    <h2>Знание - сила!</h2>
+    <div class="overall__next next">
+        <ul>
+            <li>&lt;dialog&gt;</li>
+            <li>::backdrop</li>
+            <li>:has, :where, :is</li>
+            <li>background-attachment</li>
+            <li>clamp()</li>
+            <li>accent-color</li>
+            <li>И много всего интересного!</li>
+        </ul>
+    </div>
+</section>
+
+<div class="slide contacts">
+    <h2>Внимание! Спасибо за внимание!</h2>
+    <img src="./assets/images/contacts.svg" alt="Контакты QR код">
+    <p><b>Илья Оловянников</b></p>
+    <p><b>@olovyannikov_frontend</b></p>
+</div>
+
 <footer class="badge">
     <a href="https://github.com/shower/shower">Сделано в Shower</a>
 </footer>
 <div class="progress"></div>
 <script src="./shower.min.js"></script>
+<script src="./script.js"></script>
 </body>
 </html>
