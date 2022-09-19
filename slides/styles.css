@@ -22,6 +22,14 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'MoscowCSS';
+    src: url('./assets/fonts/VAG_Rounded_TL.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -42,7 +50,8 @@
     --space-md: 16px;
     --space-lg: 21px;
     --space-xl: 32px;
-    --font-family: 'SBSans', 'PT Sans Narrow', 'Arial', sans-serif;
+    --font-alt: 'MoscowCSS', 'PT Sans Narrow', 'Arial', sans-serif;
+    --font-family: 'SBSans', var(--font-alt);
     --ribbon-size: 35px;
     font-family: var(--font-family);
     color: var(--c-text);
@@ -50,6 +59,7 @@
 
 .shower .caption {
     text-shadow: none;
+    font-family: var(--font-alt);
 }
 
 .shower .caption h1 {
@@ -57,7 +67,7 @@
     margin-bottom: var(--space-md);
     padding-bottom: var(--space-md);
     width: fit-content;
-    font-family: var(--font-family);
+    font-family: var(--font-alt);
     color: var(--c-text);
 }
 
@@ -117,7 +127,10 @@
 
 .slide {
     background-color: var(--c-white);
-    background-image: linear-gradient(0deg, #f6f8f9 25%, #eafbeb 98%);
+    background-image: url('./assets/images/moscowcss-star.png'), linear-gradient(0deg, #f6f8f9 25%, #eafbeb 98%);
+    background-position: right bottom, center;
+    background-repeat: no-repeat;
+    background-size: 75px 75px, 100%;
 }
 
 .slide h2 {
@@ -129,7 +142,8 @@
 }
 
 .main h2 {
-    font-size: 72px;
+    font-size: 60px;
+    font-family: var(--font-alt);
 }
 
 .slide .awesome {
@@ -249,11 +263,24 @@ img {
     width: 375px;
 }
 
+.calc--2 .calc__item {
+    font-size: 1.25rem;
+}
+
 .calc--math img {
     margin: 0 auto;
     display: block;
     width: 380px;
     text-align: center;
+}
+
+.calc .shout {
+    font-size: 6rem;
+    letter-spacing: 0.25rem;
+}
+
+.calc.siblings img {
+    width: 600px;
 }
 
 .calc__item {
@@ -262,6 +289,10 @@ img {
     grid-template-columns: repeat(2, 50%);
     gap: 15px;
     justify-content: space-between;
+}
+
+.calc__item img {
+    width: 800px;
 }
 
 .calc__example-cards {
@@ -328,7 +359,6 @@ img {
     padding: 12px;
     color: white;
     background-color: salmon;
-    transition: 0.3s ease;
     transform: translateX(-100%);
 }
 
@@ -381,6 +411,12 @@ img {
     width: 100%;
 }
 
+.form-validation--can-i-use img {
+    display: block;
+    margin-top: 100px;
+    max-width: 1000px;
+}
+
 .form-validation .form {
     display: block;
     max-width: 480px;
@@ -424,7 +460,7 @@ img {
     background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxNicgaGVpZ2h0PScxNicgdmlld0JveD0nMCA4IDE2IDE2JyBlbmFibGUtYmFja2dyb3VuZD0nbmV3IDAgOCAxNiAxNic+PHN0eWxlIHR5cGU9J3RleHQvY3NzJz4uc3Qwe2ZpbGw6I0YxODI2MDt9PC9zdHlsZT48cGF0aCBjbGFzcz0nc3QwJyBkPSdNNy4yIDE3LjRsLTUuNCAzLjgtMS40LTIuNSA2LTIuNy02LjEtMi44IDEuNC0yLjQgNS40IDMuOC0uNS02LjZoMi43bC0uNSA2LjYgNS40LTMuOCAxLjQgMi40LTYgMi44IDYuMSAyLjgtMS40IDIuNS01LjQtMy44LjUgNi41aC0yLjhsLjYtNi42eicvPjwvc3ZnPg==");
 }
 
-.form-validation .form__input[required]:focus:invalid {
+.form-validation .form__input[required]:not(:placeholder-shown):focus:invalid {
     border-color: #cf5340;
     background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48Y2lyY2xlIGZpbGw9IiNDRjUzNDAiIGN4PSI4IiBjeT0iOCIgcj0iOCIvPjwvc3ZnPg==");
 }
@@ -455,14 +491,28 @@ img {
     display: block;
 }
 
-.form-validation__item pre {
-    font-size: 15px;
+.form-validation.validation pre {
+    font-size: 1.05rem;
+}
+
+.form-validation[id="34"] .form-validation__item pre {
+    font-size: 0.95rem;
+}
+
+.form-validation[id="36"] .form-validation__item pre {
+    font-size: 1.10rem;
 }
 
 .empty img {
     display: block;
     margin: 0 auto;
     width: 380px;
+}
+
+.empty--can-i-use img {
+    display: block;
+    margin-top: 100px;
+    width: 800px;
 }
 
 .empty__list {
@@ -509,6 +559,16 @@ img {
     width: 380px;
 }
 
+.overall__next--with-image {
+    display: flex;
+    justify-content: space-between;
+}
+
+.overall__next--with-image img {
+    width: 300px;
+    object-fit: contain;
+}
+
 .contacts img {
     display: block;
     margin: 0 auto;
@@ -518,4 +578,54 @@ img {
 
 .contacts p {
     margin: 0;
+}
+
+.placeholder div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.placeholder img {
+    position: absolute;
+    width: 500px;
+}
+
+.placeholder img:first-child {
+    left: -50px;
+}
+
+.placeholder img:last-child {
+    top: 50px;
+    right: -50px;
+    z-index: -1;
+    transform: rotate(15deg);
+    width: 450px;
+}
+
+.placeholder pre {
+    font-size: 1.25rem;
+}
+
+.placeholder input {
+    margin-top: 12%;
+    padding: 15px;
+    font-size: 2rem;
+    width: 100%;
+    border: 0;
+    border-radius: 3px;
+    background-color: #e5e5e5;
+}
+
+.placeholder input:placeholder-shown + label {
+    display: none;
+}
+
+.placeholder input:placeholder-shown {
+    color: white;
+    background-color: plum;
+}
+
+.placeholder input:placeholder-shown::placeholder {
+    color: white;
 }

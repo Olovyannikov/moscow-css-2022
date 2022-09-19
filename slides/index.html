@@ -16,7 +16,7 @@
 
 <header class="caption">
     <h1>Старый Новый CSS</h1>
-    <p>Оловянников Илья, Moscow CSS 2022 </p>
+    <p>Оловянников Илья, Moscow CSS 2022</p>
 </header>
 
 <section class="slide main">
@@ -25,6 +25,9 @@
         <del>забыли</del>
         заслужили
     </h2>
+    <div class="awesome">
+        <p>CSS Is Awesome</p>
+    </div>
 
 </section>
 <section class="slide about">
@@ -255,11 +258,11 @@
     <div class="calc__item">
             <pre>
                 <code>.item {</code>
-                <code>  padding: 12px;</code>
-                <code>  color: white;</code>
-                <code>  background-color: salmon;</code>
-                <code>  <mark>transition: 0.3s ease;</mark></code>
+                <code>  //...</code>
                 <code>  <mark>transform: translateX(-100%);</mark></code>
+                <code>  <mark>animation-name: slide-in;</mark></code>
+                <code>  <mark>animation-duration: 2s;</mark></code>
+                <code>  <mark>animation-fill-mode: forwards;</mark></code>
                 <code>}</code>
             </pre>
     </div>
@@ -274,7 +277,7 @@
             <code>}</code>
         </pre>
         <pre>
-            <code>ul li {</code>
+            <code>.item {</code>
             <code>  animation-name: slide-in;</code>
             <code>}</code>
         </pre>
@@ -295,26 +298,105 @@
 <section class="calc slide"><h2>calc()</h2>
     <div class="calc__item">
         <pre>
-            <code><mark>ul</mark> li {</code>
+            <code>.item {</code>
+            <code>  //...</code>
             <code>  animation-name: slide-in;</code>
             <code>  animation-duration: 2s;</code>
             <code>  animation-fill-mode: forwards;</code>
-            <code>  animation-delay: calc(var(<mark>--index</mark>) * 0.5s);</code>
+            <code>  animation-delay: calc(<mark>порядковый номер элемента</mark> * 0.5s);</code>
             <code>}</code>
         </pre>
     </div>
 </section>
+<section class="calc slide">
+    <h2>calc()</h2>
+    <div class="calc__item">
+        <pre>
+            <code>.item:nth-child(<mark>N</mark>) {</code>
+            <code>  animation-delay: calc(<mark>N</mark> * 0.5s);</code>
+            <code>}</code>
+        </pre>
+    </div>
+    <div class="calc__item">
+        <pre>
+            <code>.item:nth-child(<mark>N + 1</mark>) {</code>
+            <code>  animation-delay: calc(<mark>(N + 1)</mark> * 0.5s);</code>
+            <code>}</code>
+        </pre>
+    </div>
+</section>
+
+<section class="calc slide">
+    <h2 class="shout">Неизвестное количество элементов?</h2>
+</section>
+
+
+<section class="calc slide">
+    <h2>calc()</h2>
+    <ul>
+        <li class="next">CSS Counter?</li>
+    </ul>
+</section>
+
+<section class="calc slide siblings">
+    <h2>calc()</h2>
+    <ul>
+        <li class="next active">CSS Counter? - Не поддерживается внутри calc()</li>
+        <li class="next">sibling-count api?</li>
+    </ul>
+    <div>
+        <img src="./assets/images/siblings.jpeg">
+    </div>
+</section>
+
+<section class="calc slide">
+    <h2>calc()</h2>
+    <ul>
+        <li class="next active">CSS Counter? - Не поддерживается внутри calc()</li>
+        <li class="next active">sibling-count api? - Пока только proposal</li>
+    </ul>
+    <div>
+        <img src="./assets/images/siblings-1.jpeg">
+    </div>
+</section>
+
+<section class="calc slide"><h2>calc()</h2>
+    <div class="calc__item">
+        <pre>
+            <code>.item {</code>
+            <code> --index: <mark>N</mark>;</code>
+            <code>  animation-delay: calc(<mark>var(--index)</mark> * 0.5s);</code>
+            <code>}</code>
+        </pre>
+    </div>
+</section>
+
+<section class="calc slide calc--2"><h2>calc()</h2>
+    <div class="calc__item">
+        <pre>
+            <code>  &lt;ul class="list"&gt;</code>
+            <code>   &lt;li style="<mark>--index: 1</mark>;" class="item"&gt;First Element&lt;/li&gt;</code>
+            <code>   &lt;li style="--index: 2;" class="item"&gt;Second Element&lt;/li&gt;</code>
+            <code>   &lt;li style="--index: 3;" class="item"&gt;Third Element&lt;/li&gt;</code>
+            <code>  &lt;/ul&gt;</code>
+        </pre>
+    </div>
+    <div class="calc__item">
+        <pre>
+            <code>.item {</code>
+            <code>  animation-delay: calc(<mark>var(--index)</mark> * 0.5s);</code>
+            <code>}</code>
+        </pre>
+    </div>
+</section>
+
 <section class="calc slide"><h2>calc()</h2>
     <div class="calc__item">
         <div class="fw">
             <pre>
-                <code>const ul = $('.list');</code>
                 <code>const li = $('.item');</code>
-                <code class="mark">ul.setAttribute('data-animation', true);</code>
                 <code>li.forEach((el, idx) => </code>
                 <code class="mark">  el.style.setProperty('--index', idx + 1));</code>
-                <code></code>
-                <code>}</code>
             </pre>
         </div>
     </div>
@@ -332,6 +414,44 @@
             </div>
         </div>
     </div>
+</section>
+<section class="calc slide animation">
+    <h2>calc()</h2>
+    <div class="calc__item">
+        <img src="./assets/images/caniuse-calc.jpeg" alt="Calc - уже можно">
+    </div>
+</section>
+
+<section class="slide placeholder">
+    <h2>:placeholder-shown</h2>
+    <div>
+        <img src="./assets/images/k-1.jpeg"/>
+        <img src="./assets/images/k-2.jpeg" />
+    </div>
+</section>
+
+<section class="slide placeholder">
+    <h2>:placeholder-shown</h2>
+    <pre>
+        <code>&lt;input placeholder="Введите текст..."&gt;</code>
+    </pre>
+
+    <pre>
+        <code>// <mark>Если видно placeholder, то</mark></code>
+        <code>input:placeholder-shown {</code>
+        <code>  background-color: plum;</code>
+        <code>}</code>
+        <br/>
+        <code>input:placeholder-shown::placeholder {</code>
+        <code>  color: white;</code>
+        <code>}</code>
+    </pre>
+</section>
+
+<section class="slide placeholder">
+    <h2>:placeholder-shown</h2>
+    <input id="shown-test" placeholder="Введите текст..."/>
+    <label for="shown-test">В этом input'e что-то есть...</label>
 </section>
 
 <section class="slide form-validation">
@@ -354,13 +474,14 @@
                 <button class="form__submit" type="submit">Зарегистрироваться</button>
             </fieldset>
         </form>
-    </div></section>
-<section class="slide form-validation"><h2>:valid & :invalid</h2>
+    </div>
+</section>
+<section class="slide form-validation validation"><h2>:valid & :invalid</h2>
     <div class="form-validation__item">
             <pre>
                 <code>&lt;form class="form"&gt;</code>
                 <code>  &lt;h1&gt;Регистрация&lt;/h1&gt;</code>
-                <code>  &lt;fieldset&gt;</code>
+                <code>  <mark>&lt;fieldset&gt;</mark></code>
                 <code>      &lt;input placeholder="Введите имя" type="text" <mark>required</mark> class="form__input"&gt;</code>
                 <code>      &lt;input placeholder="Введите почту" <mark>type="email"</mark> required class="form__input"&gt;</code>
                 <code>      &lt;input placeholder="Введите пароль" type="password" required class="form__input"
@@ -370,17 +491,18 @@
                 <code>  &lt;/fieldset&gt;</code>
                 <code>&lt;/form&gt;</code>
             </pre>
-    </div></section>
+    </div>
+</section>
 <section class="slide form-validation"><h2>:valid & :invalid</h2>
     <div class="form-validation__item">
         <pre>
-            <code>.form__input:required {</code>
+            <code>.form__input<mark>:required</mark> {</code>
             <code>  border-color: grey;</code>
             <code>  background-image: url('./images/required.svg');</code>
             <code>}</code>
         </pre>
         <pre>
-            <code>.form__input:required:focus<mark>:invalid</mark> {</code>
+            <code>.form__input:required<mark>:not(:placeholder-shown):focus:invalid</mark> {</code>
             <code>  border-color: red;</code>
             <code>  background-image: url('./images/required-invalid.svg');</code>
             <code>}</code>
@@ -391,28 +513,23 @@
             <code>  background-image: url('./images/required-valid.svg');</code>
             <code>}</code>
         </pre>
-    </div></section>
+    </div>
+</section>
 <section class="slide form-validation"><h2>:valid & :invalid</h2>
     <div class="form-validation__item">
-            <pre>
-                <code>.form fieldset {</code>
-                <code>  border: none;</code>
-                <code>  padding: 0;</code>
-                <code>  margin: 0;</code>
-                <code>}</code>
-            </pre>
         <pre>
-                <code><mark>// Если любое из полей invalid скрываем кнопку регистрации</mark></code>
-                <code>.form <mark>fieldset:invalid</mark> .form__submit {</code>
-                <code>  display: none;</code>
-                <code>}</code>
-            </pre>
-    </div></section>
+            <code><mark>// Если любое из полей invalid скрываем кнопку регистрации</mark></code>
+            <code>.form <mark>fieldset:invalid</mark> .form__submit {</code>
+            <code>  display: none;</code>
+            <code>}</code>
+        </pre>
+    </div>
+</section>
 <section class="slide form-validation"><h2>:valid & :invalid</h2>
     <div class="form-validation__item">
             <pre>
                 <code><mark>// Ошибка длины пароля</mark></code>
-                <code>.form form__error {</code>
+                <code>.form .form__error {</code>
                 <code>  display: none;</code>
                 <code>  color: red;</code>
                 <code>}</code>
@@ -423,7 +540,8 @@
                 <code>  display: block;</code>
                 <code>}</code>
             </pre>
-    </div></section>
+    </div>
+</section>
 <section class="slide form-validation"><h2>:valid & :invalid</h2>
     <div class="form-validation__item">
         <form class="form" action="" method="POST" autocomplete="off">
@@ -439,6 +557,10 @@
             </fieldset>
         </form>
     </div>
+</section>
+<section class="slide form-validation form-validation--can-i-use">
+    <h2>:valid & :invalid</h2>
+    <img src="./assets/images/valid.jpeg">
 </section>
 
 <section class="slide empty">
@@ -487,6 +609,11 @@
         </p>
     </div>
 </section>
+
+<section class="slide empty empty--can-i-use">
+    <h2>:empty</h2>
+    <img src="./assets/images/empty.jpeg" alt="Can I Use для свойства empty">
+</section>
 <section class="slide empty">
     <h2>:empty</h2>
     <img src="./assets/images/empty-meme.jpg" alt="Вы прекрасны!">
@@ -504,6 +631,21 @@
             <li>accent-color</li>
             <li>И много всего интересного!</li>
         </ul>
+    </div>
+</section>
+<section class="slide overall">
+    <h2>Знание - сила!</h2>
+    <div class="overall__next overall__next--with-image">
+        <ul>
+            <li>&lt;dialog&gt;</li>
+            <li>::backdrop</li>
+            <li>:has, :where, :is</li>
+            <li>background-attachment</li>
+            <li>clamp()</li>
+            <li>accent-color</li>
+            <li>И много всего интересного!</li>
+        </ul>
+        <img src="./assets/images/ohmygod.jpeg" alt="">
     </div>
 </section>
 
