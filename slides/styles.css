@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: 'MoscowCSS';
-    src: url('./assets/fonts/VAG_Rounded_TL.ttf') format('ttf');
+    src: url('./assets/fonts/VAG_Rounded_TL.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -142,8 +142,12 @@
 }
 
 .main h2 {
-    font-size: 60px;
+    font-size: 48px;
     font-family: var(--font-alt);
+}
+
+.main.slide {
+    background-size: 40% ,100%;
 }
 
 .slide .awesome {
@@ -460,7 +464,7 @@ img {
     background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxNicgaGVpZ2h0PScxNicgdmlld0JveD0nMCA4IDE2IDE2JyBlbmFibGUtYmFja2dyb3VuZD0nbmV3IDAgOCAxNiAxNic+PHN0eWxlIHR5cGU9J3RleHQvY3NzJz4uc3Qwe2ZpbGw6I0YxODI2MDt9PC9zdHlsZT48cGF0aCBjbGFzcz0nc3QwJyBkPSdNNy4yIDE3LjRsLTUuNCAzLjgtMS40LTIuNSA2LTIuNy02LjEtMi44IDEuNC0yLjQgNS40IDMuOC0uNS02LjZoMi43bC0uNSA2LjYgNS40LTMuOCAxLjQgMi40LTYgMi44IDYuMSAyLjgtMS40IDIuNS01LjQtMy44LjUgNi41aC0yLjhsLjYtNi42eicvPjwvc3ZnPg==");
 }
 
-.form-validation .form__input[required]:not(:placeholder-shown):focus:invalid {
+.form-validation .form__input[required]:not(:placeholder-shown):invalid {
     border-color: #cf5340;
     background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48Y2lyY2xlIGZpbGw9IiNDRjUzNDAiIGN4PSI4IiBjeT0iOCIgcj0iOCIvPjwvc3ZnPg==");
 }
